@@ -1,0 +1,33 @@
+name: Sample Workflow
+description: A sample GitHub Actions workflow for demonstration
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+    
+    - name: Run Python scripts
+      run: |
+        python python/calculator.py
+        python python/data_processor.py
+    
+    - name: Display completion message
+      run: echo "Build completed successfully!"

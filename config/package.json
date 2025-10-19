@@ -1,0 +1,22 @@
+{
+  "name": "archivos-copilot",
+  "version": "1.0.0",
+  "description": "Sample files for GitHub Copilot demonstration",
+  "main": "javascript/utils.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0",
+    "start": "node javascript/utils.js"
+  },
+  "keywords": [
+    "copilot",
+    "samples",
+    "examples",
+    "demo"
+  ],
+  "author": "IngJhonP",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IngJhonP/Archivos.git"
+  }
+}
